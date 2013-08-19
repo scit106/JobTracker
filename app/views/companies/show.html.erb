@@ -1,0 +1,12 @@
+<h1><%= @company.name %></h1>
+
+<p><%= @company.website %></p>
+
+<div>Notes:
+<p><%= @company.notes %></p>
+</div>
+
+<p><%= @company.source %></p>
+
+<p><%= link_to 'Home', companies_path %></p>
+<p><%= link_to 'Edit', edit_company_path(@company) %></p>

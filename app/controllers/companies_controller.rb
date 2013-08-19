@@ -8,6 +8,10 @@ class CompaniesController < ApplicationController
 		@company = Company.new
 	end
 
+	def show
+		@company = Company.find(params[:id])
+	end
+
 	def create
 		@company = Company.new(params[:company])
 		if @company.save
@@ -23,7 +27,7 @@ class CompaniesController < ApplicationController
 
 	def update
 		@company = Company.find(params[:id])
-		@company.update_attributes
+		@company.update_attributes(params[:company])
 	end
 
 	def destroy

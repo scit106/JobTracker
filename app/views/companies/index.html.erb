@@ -2,6 +2,7 @@
 
 <% @companies.each do |company| %>
 <ul>
-	<li><%= link_to company.name, companies_path(company) %></li>
+	<li><%= link_to company.name, company_path(company) %></li>
 </ul>
 <% end %>
+<p><%= link_to 'New', new_company_path %></p>
